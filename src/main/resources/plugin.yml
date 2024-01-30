@@ -14,4 +14,4 @@ commands:
     definelink:
       description: the sending Link
     definemessage:
-      description: sets the message
+      description: sets the message to send
