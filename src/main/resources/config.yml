@@ -1,0 +1,6 @@
+# Custom Message to send
+message: "Here could stand your message!"
+#
+link: "https://github.com/traxonLp"
+# Time between every message in Minutes!
+interval: 10

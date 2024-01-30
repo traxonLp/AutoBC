@@ -1,0 +1,17 @@
+name: AutoBC
+version: '${project.version}'
+main: de.traxonlp.autobc.Main
+api-version: '1.20'
+authors: [traxonLp]
+description: Sends every 10 Minutes a Link into the Minecraft chat
+website: github.com/traxonLp
+
+commands:
+    link:
+      description: Sends the player the specified Link
+    interval:
+      description: the Interval for the send Link
+    definelink:
+      description: the sending Link
+    definemessage:
+      description: sets the message
