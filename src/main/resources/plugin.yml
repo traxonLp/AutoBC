@@ -9,7 +9,7 @@ website: github.com/traxonLp
 commands:
     link:
       description: Sends the player the specified Link
-    interval:
+    defineinterval:
       description: the Interval for the send Link
     definelink:
       description: the sending Link

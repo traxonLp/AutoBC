@@ -5,10 +5,11 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class defineMessage implements CommandExecutor {
+public class defineInterval implements CommandExecutor {
+
     private final Main plugin;
 
-    public defineMessage(Main plugin) {
+    public defineInterval(Main plugin) {
         this.plugin = plugin;
     }
 
@@ -18,18 +19,14 @@ public class defineMessage implements CommandExecutor {
         //grab the config value message
         if (sender.isOp()){
             if (args.length > 0) {
-                String messageString = "";
-                for (int i = 0; i < args.length; i++) {
-                    messageString += args[i] + " ";
-                }
-                String message = messageString;
+                String message = args[0];
 
-                this.plugin.getConfig().set("message", message);
+                this.plugin.getConfig().set("interval", message);
                 this.plugin.saveConfig();
-                sender.sendMessage("Message set!");
+                sender.sendMessage("Interval set!");
             }
             else {
-                sender.sendMessage("You must provide a new message");
+                sender.sendMessage("You must provide a Integer! (Minutes)");
             }
 
         }
@@ -38,4 +35,5 @@ public class defineMessage implements CommandExecutor {
         }
         return true;
     }
-}
+    }
+

@@ -1,5 +1,6 @@
 package de.traxonlp.autobc;
 
+import de.traxonlp.autobc.commands.defineInterval;
 import de.traxonlp.autobc.commands.defineLink;
 import de.traxonlp.autobc.commands.defineMessage;
 import de.traxonlp.autobc.commands.linkCommand;
@@ -22,6 +23,7 @@ public final class Main extends JavaPlugin {
         getCommand("link").setExecutor(new linkCommand(this));
         getCommand("definelink").setExecutor(new defineLink(this));
         getCommand("definemessage").setExecutor(new defineMessage(this));
-    }
+        getCommand("defineinterval").setExecutor(new defineInterval(this));
 
+    }
 }
