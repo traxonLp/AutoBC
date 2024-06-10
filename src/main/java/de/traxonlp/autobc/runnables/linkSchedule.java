@@ -1,22 +1,17 @@
 package de.traxonlp.autobc.runnables;
 
-import de.traxonlp.autobc.Main;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class linkSchedule {
-    private final Main plugin;
-    public linkSchedule(Main plugin) {
-        this.plugin = plugin;
+
+public class linkSchedule extends BukkitRunnable {
+    Player p;
+    public linkSchedule(Player player) {
+        p = player;
     }
-
-    public void runnable(){
-    new BukkitRunnable() {
-
-        @Override
-        public void run() {
-
-        }
-    }.runTaskTimerAsynchronously(this, 0, plugin.getConfig().getInt("interval"));
+    @Override
+    public void run() {
+        p.sendMessage("Hi");
+    }
 }
 
-}
